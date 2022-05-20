@@ -8,48 +8,48 @@ describe("Helpers Suite", () => {
     expect(helpers.isPalindrome("madam")).toEqual(true);
   });
 
-  // xit("should remove duplicated elements", () => {
-  //   expect(removeDuplicates([])).toEqual([]);
-  //   expect(removeDuplicates([1, 2, 3, 4])).toEqual([1, 2, 3, 4]);
-  //   expect(removeDuplicates([0, 0, 4, 4, 5, 5])).toEqual([0, 4, 5]);
-  //   expect(removeDuplicates([0, "", "", 1, 2, "em"])).toEqual([
-  //     0,
-  //     "",
-  //     1,
-  //     2,
-  //     "em",
-  //   ]);
-  //   expect(removeDuplicates(["a", "b", "b", "ed", "ed", "f"])).toEqual([
-  //     "a",
-  //     "b",
-  //     "ed",
-  //     "f",
-  //   ]);
-  // });
+  it("should remove duplicated elements", () => {
+    expect(helpers.removeDuplicates([])).toEqual([]);
+    expect(helpers.removeDuplicates([1, 2, 3, 4])).toEqual([1, 2, 3, 4]);
+    expect(helpers.removeDuplicates([0, 0, 4, 4, 5, 5])).toEqual([0, 4, 5]);
+    expect(helpers.removeDuplicates([0, "", "", 1, 2, "em"])).toEqual([
+      0,
+      "",
+      1,
+      2,
+      "em",
+    ]);
+    expect(helpers.removeDuplicates(["a", "b", "b", "ed", "ed", "f"])).toEqual([
+      "a",
+      "b",
+      "ed",
+      "f",
+    ]);
+  });
 
-  // xit("should search a collection for a target value", () => {
-  //   const nestedObject = {
-  //     data: {
-  //       info: {
-  //         stuff: {
-  //           thing: {
-  //             moreStuff: {
-  //               magicNumber: 44,
-  //               magicString: "bar",
-  //             },
-  //           },
-  //         },
-  //       },
-  //     },
-  //   };
-  //   expect(contains(nestedObject, 44)).toEqual(true);
-  //   expect(contains(nestedObject, "foo")).toEqual(false);
-  // });
+  xit("should search a collection for a target value", () => {
+    const nestedObject = {
+      data: {
+        info: {
+          stuff: {
+            thing: {
+              moreStuff: {
+                magicNumber: 44,
+                magicString: "bar",
+              },
+            },
+          },
+        },
+      },
+    };
+    expect(contains(nestedObject, 44)).toEqual(true);
+    expect(contains(nestedObject, "foo")).toEqual(false);
+  });
 
-  // xit("should identify if sum to target exist", () => {
-  //   expect(sumToTarget([], 0)).toEqual([]);
-  //   expect(sumToTarget([3, 6, 7, 12, -1, -4], 100)).toEqual([]);
-  //   expect(sumToTarget([3, 6, 7, 12, -1, -4], 10)).toEqual([3, 7]);
-  //   expect(sumToTarget([44, 5, 1, 6, -43, -1, 7], 0)).toEqual([1, -1]);
-  // });
+  xit("should identify if sum to target exist", () => {
+    expect(sumToTarget([], 0)).toEqual([]);
+    expect(sumToTarget([3, 6, 7, 12, -1, -4], 100)).toEqual([]);
+    expect(sumToTarget([3, 6, 7, 12, -1, -4], 10)).toEqual([3, 7]);
+    expect(sumToTarget([44, 5, 1, 6, -43, -1, 7], 0)).toEqual([1, -1]);
+  });
 });
