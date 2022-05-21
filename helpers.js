@@ -54,7 +54,7 @@ module.exports.contains =function(nestedObject, search){
 
     Object.keys(nestedObject).forEach(key => {
 
-      console.log(`key: ${key}, value: ${nestedObject[key]}`)
+      console.log("key: " + key+ "value: " + nestedObject[key])
 
       if(nestedObject[key]===search){
         console.log("value equal to search " + nestedObject[key])
