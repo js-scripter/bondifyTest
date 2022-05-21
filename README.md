@@ -1,5 +1,5 @@
 # bondifyTest
-to test => run nom i 
+to test => run npm i 
 to run => npm run test
 
 MDN links I referred as below- no other link has been used or referred by me.
