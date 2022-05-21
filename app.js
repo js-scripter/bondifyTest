@@ -43,29 +43,31 @@
 // result = removeDuplicates([])
 // console.log(result)
 
-// result = removeDuplicates([0, 0, 4, 4, 5, 5])
-// console.log(result)
+result = removeDuplicates([0, 0, 4, 4, 5, 5])
+console.log("result "+result)
 
 // result = removeDuplicates(["a", "b", "b", "ed", "ed", "f"])
 // console.log(result)
 
-// result = removeDuplicates(["a", "b", "b", "ed", "ed", "f"])
-// console.log(result)
-
-result = removeDuplicates([0, "", "", 1, 2, "em"])
-console.log(result)
+result = removeDuplicates([0, "", "", 1, 2, "em","em"])
+console.log("result "+result)
 
 function removeDuplicates(array){
   let unique=[]
-
+  emptyStringFound=0
   for(let i=0; i<array.length; i++){
       let found = unique.find(element => element == array[i]);
-      console.log("is "+array[i]+" found "+found)
-      if(found){
+      
+      if(found==undefined){
+        console.log("is "+array[i]+" found "+found)
         unique.push(array[i])
       }
-      console.log(unique)
+      // else if(found==0 && array[i]=="" && emptyStringFound==0){
+      //   console.log("in else if is "+array[i]+" found "+found)
+      //   unique.push(array[i])
+      //   emptyStringFound++
+      // }
     }
+    // console.log(unique)
     return unique
-
 }

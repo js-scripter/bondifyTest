@@ -17,18 +17,18 @@ module.exports.isPalindrome = function (str){
 }
 
 module.exports.removeDuplicates = function(array){
-	let arrayLength=array.length
- 	let duplicates=[]
-
-	for(let i=0; i<array.length; i++){
-    	let result = array.filter(element => element == array[i] && !duplicates.includes(array[i]))
-	    if(result.length > 1){
-	      duplicates.push(array[i])
-	    }
-  	}
-	if(duplicates.length>0){
-		return duplicates
-	}else{
-		return array
-	}
+	let unique=[]
+  emptyStringFound=0
+  for(let i=0; i<array.length; i++){
+      let found = unique.find(element => element == array[i]);
+      // console.log("is "+array[i]+" found "+found)
+      if(found==undefined){
+        unique.push(array[i])
+      }else if(found==0 && emptyStringFound==0){
+        unique.push(array[i])
+        emptyStringFound++
+      }
+  }
+  // console.log(unique)
+  return unique
 }
