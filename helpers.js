@@ -16,20 +16,32 @@ module.exports.isPalindrome = function (str){
   return true;
 }
 
+// module.exports.removeDuplicates = function(array){
+// 	let unique=[]
+//   emptyStringFound=0
+//   for(let i=0; i<array.length; i++){
+//       let found = unique.find(element => element == array[i]);
+//       // console.log("is "+array[i]+" found "+found)
+//       if(found==undefined){
+//         unique.push(array[i])
+//       }else if(found==0 && emptyStringFound==0){
+//         unique.push(array[i])
+//         emptyStringFound++
+//       }
+//   }
+//   // console.log(unique)
+//   return unique
+// }
+
 module.exports.removeDuplicates = function(array){
-	let unique=[]
-  emptyStringFound=0
-  for(let i=0; i<array.length; i++){
-      let found = unique.find(element => element == array[i]);
-      // console.log("is "+array[i]+" found "+found)
-      if(found==undefined){
-        unique.push(array[i])
-      }else if(found==0 && emptyStringFound==0){
-        unique.push(array[i])
-        emptyStringFound++
-      }
+
+ let unique=[]
+ for(let i=0;i<array.length;i++){
+  if(array.indexOf(array[i])===i){
+    unique.push(array[i])
   }
-  // console.log(unique)
+ }
+
   return unique
 }
 

@@ -1,7 +1,7 @@
 const helpers = require('./helpers.js')
 
 describe("Helpers Suite", () => {
-  it("should tell whether a string is a pallindrom", () => {
+  xit("should tell whether a string is a pallindrom", () => {
     expect(helpers.isPalindrome("")).toEqual(true);
     expect(helpers.isPalindrome("abcd")).toEqual(false);
     expect(helpers.isPalindrome("11/11/11")).toEqual(true);
@@ -27,7 +27,7 @@ describe("Helpers Suite", () => {
     ]);
   });
 
-  it("should search a collection for a target value", () => {
+  xit("should search a collection for a target value", () => {
     const nestedObject = {
       data: {
         info: {
