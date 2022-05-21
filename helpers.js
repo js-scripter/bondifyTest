@@ -33,15 +33,17 @@ module.exports.isPalindrome = function (str){
 //   return unique
 // }
 
+//above logic was written initially but it was failing for below test case
+// expect(helpers.removeDuplicates([0, 0, 4, 4, 5, 5])).toEqual([0, 4, 5]);
+// so used infexOf function and then I wrote below function
+// which is working in all the conditions
 module.exports.removeDuplicates = function(array){
-
- let unique=[]
- for(let i=0;i<array.length;i++){
-  if(array.indexOf(array[i])===i){
-    unique.push(array[i])
+  let unique=[]
+  for(let i=0;i<array.length;i++){
+    if(array.indexOf(array[i])===i){
+      unique.push(array[i])
+    }
   }
- }
-
   return unique
 }
 
@@ -66,4 +68,19 @@ module.exports.contains =function(nestedObject, search){
     }
   }
   return returnValue
+}
+
+module.exports.sumToTarget = function (array, sumTarget){
+  let elementsFound=[]
+  for (var i = 0; i < array.length; i++) {
+    array[i]
+    for (var j = 0 ; j < array.length; j++) {
+      if(j!==i && (array[i] + array[j] == sumTarget)){
+        elementsFound.push(array[i])
+        elementsFound.push(array[j])
+        return elementsFound        
+      }
+    }
+  }
+  return []
 }

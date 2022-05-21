@@ -72,23 +72,23 @@
 //     return unique
 // }
 
-const nestedObject = {
-  data: {
-    info: {
-      stuff: {
-        thing: {
-          moreStuff: {
-            magicNumber: 44,
-            magicString: "bar",
-          },
-        },
-      },
-    },
-  },
-};
+// const nestedObject = {
+//   data: {
+//     info: {
+//       stuff: {
+//         thing: {
+//           moreStuff: {
+//             magicNumber: 44,
+//             magicString: "bar",
+//           },
+//         },
+//       },
+//     },
+//   },
+// };
 
-let result = contains(nestedObject,44)
-console.log(result)
+// let result = contains(nestedObject,44)
+// console.log(result)
 
 // function contains(nestedObject, search) {
 //   console.log(`search term ${search}`)
@@ -114,28 +114,28 @@ console.log(result)
 // }
 
 
-function contains(nestedObject, search) {
-  console.log(`search term ${search}`)
-  returnValue=false
-  while (typeof nestedObject === 'object' && nestedObject !== null) {
+// function contains(nestedObject, search) {
+//   console.log(`search term ${search}`)
+//   returnValue=false
+//   while (typeof nestedObject === 'object' && nestedObject !== null) {
 
-    Object.keys(nestedObject).forEach(key => {
+//     Object.keys(nestedObject).forEach(key => {
 
-      console.log(`key: ${key}, value: ${nestedObject[key]}`)
+//       console.log(`key: ${key}, value: ${nestedObject[key]}`)
 
-      if(nestedObject[key]===search){
-        console.log("value equal to search " + nestedObject[key])
-        returnValue = true
-        // break;
-      }
-      nestedObject = nestedObject[key]
-    })
-    if(returnValue==true){
-      break
-    }
-  }
-  return returnValue
-}
+//       if(nestedObject[key]===search){
+//         console.log("value equal to search " + nestedObject[key])
+//         returnValue = true
+//         // break;
+//       }
+//       nestedObject = nestedObject[key]
+//     })
+//     if(returnValue==true){
+//       break
+//     }
+//   }
+//   return returnValue
+// }
 
 // function contains(nestedObject, search) {
 //   // console.log(search)
@@ -156,3 +156,35 @@ function contains(nestedObject, search) {
 //   return false
     
 // }
+
+
+// let array = [3, 6, 7, 12, -1, -4]
+// sumTarget=10
+
+// let array = []
+// sumTarget=0
+
+// let array = [3, 6, 7, 12, -1, -4]
+// sumTarget=100
+
+let array = [44, 5, 1, 6, -43, -1, 7]
+sumTarget=0
+
+
+let result = sumToTarget(array,sumTarget)
+console.log(result)
+
+function  sumToTarget (array, sumTarget){
+  let elementsFound=[]
+  for (var i = 0; i < array.length; i++) {
+    array[i]
+    for (var j = 0 ; j < array.length; j++) {
+      if(j!==i && (array[i] + array[j] == sumTarget)){
+        elementsFound.push(array[i])
+        elementsFound.push(array[j])
+        return elementsFound        
+      }
+    }
+  }
+  return []
+}

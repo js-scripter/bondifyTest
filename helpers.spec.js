@@ -1,7 +1,7 @@
 const helpers = require('./helpers.js')
 
 describe("Helpers Suite", () => {
-  xit("should tell whether a string is a pallindrom", () => {
+  it("should tell whether a string is a pallindrom", () => {
     expect(helpers.isPalindrome("")).toEqual(true);
     expect(helpers.isPalindrome("abcd")).toEqual(false);
     expect(helpers.isPalindrome("11/11/11")).toEqual(true);
@@ -27,7 +27,7 @@ describe("Helpers Suite", () => {
     ]);
   });
 
-  xit("should search a collection for a target value", () => {
+  it("should search a collection for a target value", () => {
     const nestedObject = {
       data: {
         info: {
@@ -46,10 +46,10 @@ describe("Helpers Suite", () => {
     expect(helpers.contains(nestedObject, "foo")).toEqual(false);
   });
 
-  xit("should identify if sum to target exist", () => {
-    expect(sumToTarget([], 0)).toEqual([]);
-    expect(sumToTarget([3, 6, 7, 12, -1, -4], 100)).toEqual([]);
-    expect(sumToTarget([3, 6, 7, 12, -1, -4], 10)).toEqual([3, 7]);
-    expect(sumToTarget([44, 5, 1, 6, -43, -1, 7], 0)).toEqual([1, -1]);
+  it("should identify if sum to target exist", () => {
+    expect(helpers.sumToTarget([], 0)).toEqual([]);
+    expect(helpers.sumToTarget([3, 6, 7, 12, -1, -4], 100)).toEqual([]);
+    expect(helpers.sumToTarget([3, 6, 7, 12, -1, -4], 10)).toEqual([3, 7]);
+    expect(helpers.sumToTarget([44, 5, 1, 6, -43, -1, 7], 0)).toEqual([1, -1]);
   });
 });
