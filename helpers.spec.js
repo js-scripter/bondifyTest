@@ -27,7 +27,7 @@ describe("Helpers Suite", () => {
     ]);
   });
 
-  xit("should search a collection for a target value", () => {
+  it("should search a collection for a target value", () => {
     const nestedObject = {
       data: {
         info: {
@@ -42,8 +42,8 @@ describe("Helpers Suite", () => {
         },
       },
     };
-    expect(contains(nestedObject, 44)).toEqual(true);
-    expect(contains(nestedObject, "foo")).toEqual(false);
+    expect(helpers.contains(nestedObject, 44)).toEqual(true);
+    expect(helpers.contains(nestedObject, "foo")).toEqual(false);
   });
 
   xit("should identify if sum to target exist", () => {

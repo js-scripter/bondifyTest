@@ -32,3 +32,26 @@ module.exports.removeDuplicates = function(array){
   // console.log(unique)
   return unique
 }
+
+module.exports.contains =function(nestedObject, search){
+  console.log(`search term ${search}`)
+  returnValue=false
+  while (typeof nestedObject === 'object' && nestedObject !== null) {
+
+    Object.keys(nestedObject).forEach(key => {
+
+      console.log(`key: ${key}, value: ${nestedObject[key]}`)
+
+      if(nestedObject[key]===search){
+        console.log("value equal to search " + nestedObject[key])
+        returnValue = true
+        // break;
+      }
+      nestedObject = nestedObject[key]
+    })
+    if(returnValue==true){
+      break
+    }
+  }
+  return returnValue
+}
