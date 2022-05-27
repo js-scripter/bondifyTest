@@ -167,24 +167,53 @@
 // let array = [3, 6, 7, 12, -1, -4]
 // sumTarget=100
 
-let array = [44, 5, 1, 6, -43, -1, 7]
-sumTarget=0
+// let array = [44, 5, 1, 6, -43, -1, 7]
+// sumTarget=0
 
 
-let result = sumToTarget(array,sumTarget)
-console.log(result)
+// let result = sumToTarget(array,sumTarget)
+// console.log(result)
 
-function  sumToTarget (array, sumTarget){
-  let elementsFound=[]
-  for (var i = 0; i < array.length; i++) {
-    array[i]
-    for (var j = 0 ; j < array.length; j++) {
-      if(j!==i && (array[i] + array[j] == sumTarget)){
-        elementsFound.push(array[i])
-        elementsFound.push(array[j])
-        return elementsFound        
-      }
-    }
-  }
-  return []
-}
+// function  sumToTarget (array, sumTarget){
+//   let elementsFound=[]
+//   for (var i = 0; i < array.length; i++) {
+//     array[i]
+//     for (var j = 0 ; j < array.length; j++) {
+//       if(j!==i && (array[i] + array[j] == sumTarget)){
+//         elementsFound.push(array[i])
+//         elementsFound.push(array[j])
+//         return elementsFound        
+//       }
+//     }
+//   }
+//   return []
+// }
+
+// const a = 1
+// const b = 2
+// const c = a + b
+// (a + b).toString()
+
+// const hey = 'hey'
+// const you = 'hey'
+// const heyYou = hey + ' ' + you
+
+// ['h', 'e', 'y'].forEach((letter) => console.log(letter))
+
+
+// const a = 1
+// const b = 2
+// const c = a + b(a + b).toString()
+
+// const Person = require('./person-class')
+
+// const flavio = new Person('Flavio')
+// let msg = flavio.hello()
+// console.log(msg)
+
+
+const tm1=require("./ticketManager-2.js")
+const tm2=require("./ticketManager-1.js")
+
+
+

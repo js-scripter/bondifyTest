@@ -84,3 +84,9 @@ module.exports.sumToTarget = function (array, sumTarget){
   }
   return []
 }
+
+
+let res = [1,2].find(function(element, index, array) {
+  if(element===1) return true
+})
+
